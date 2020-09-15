@@ -1,0 +1,117 @@
+---
+title: "R for Data Analytics"
+author: "Abhay Singh"
+date: "15/09/2020"
+output:
+  ioslides_presentation:
+    css: slide_css.css
+    logo: logo.png
+    smaller: yes
+    widescreen: true
+    autosize: true
+    self_contained: true
+  rmdshower::shower_presentation:
+    self_contained: true
+    katex: true
+    ratio: 16x10
+    css: slide_css.css
+    logo: logo.png
+  slidy_presentation:
+    logo: logo.png
+  beamer_presentation: default
+address: Macquarie University
+#bibliography: ajm_review_syst.bib
+#widescreen: yes
+#autosize: yes
+logo: logo.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+```
+<img src="logo2.gif" height="100" width="100" style="position:absolute;top:10px;right:0px;" />
+
+
+<style>
+div.footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+    $('footnote').each(function(index) {
+      var text  = $(this).html();
+      var fnNum = (index+1).toString().sup();
+      $(this).html(text + fnNum);
+
+      var footnote   = fnNum + ': ' + $(this).attr('content') + '<br/>';
+      var oldContent = $(this).parents('slide').children('div.footnotes').html();
+      var newContent = oldContent + footnote;
+      $(this).parents('slide').children('div.footnotes').html(newContent);
+    });
+  });
+</script>
+
+
+
+# What is R?
+
+## According to the official webpage:
+
+- R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.http://www.r-project.org/about.html
+
+## According to Wikipedia
+
+- R is a free software programming language and a software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software and data analysis. Polls and surveys of data miners are showing R's popularity has increased substantially in recent years.
+
+
+
+## To Summarise
+
+- R (R Core Team, 2020), is a highly capable statistical programming language which has gained immense popularity among researchers, data analysts and in analytical professions around the globe.
+
+- R provides a flexible and extensible free environment to conduct research and analysis and also contribute in the form of open source routines and packages which promotes reproducibility.
+
+- R is the most amazing free statistical software ever!
+
+- This recent video by Revolution Analytics does a great job in summarizing R 
+
+****** 
+
+<iframe width="360" height="215" src="https://www.youtube.com/embed/XcBLEVknqvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+# Why shold we learn R?
+
+## 
+
+> R follows a type inference coding structure <footnote content="Type inference refers to the automatic deduction of the type of an expression in a programming language.">here</footnote>
+ and provides a wide variety of statistical and graphical techniques, including; 
+
+- Linear and non-linear modelling
+
+- Univariate & Multivariate Statistics
+
+- Classical statistical tests
+
+- Time-series analysis/ Econometrics
+
+- Simulation and Modelling
+
+- Datamining-classification, clustering etc.
+
+- For computationally intensive tasks, C, C++, and Fortran code can be linked and called at run time. 
+
+- R is easily extensible through functions and extensions, and the R community is noted for its active contributions in terms of packages. Over 16,000  packages and counting!
+
+
+
